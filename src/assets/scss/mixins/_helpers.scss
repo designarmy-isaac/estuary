@@ -1,0 +1,140 @@
+@for $i from 0 through 10 {
+  $n: ($i);
+
+  .mb#{$i} {
+    margin-bottom: $n+rem !important;
+  }
+
+  .mt#{$i} {
+    margin-top: $n+rem !important;
+  }
+
+  .ml#{$i} {
+    margin-left: $n+rem !important;
+  }
+
+  .mr#{$i} {
+    margin-right: $n+rem !important;
+  }
+
+  .pb#{$i} {
+    padding-bottom: $n+rem !important;
+  }
+
+  .pt#{$i} {
+    padding-top: $n+rem !important;
+  }
+  
+  .pr#{$i} {
+    padding-right: $n+rem !important;
+  }
+  .small-only-pr#{$i} {
+    @include breakpoint(small only) {
+      padding-right: $n+rem !important;
+    }
+  }
+
+  .pl#{$i} {
+    padding-left: $n+rem !important;
+  }
+
+  .small-only-pl#{$i} {
+    @include breakpoint(small only) {
+      padding-left: $n+rem !important;
+    }
+  }
+  
+  .height#{$i} {
+    height: $n+rem !important;
+    overflow-y: visible;
+  }
+  
+  .large-height#{$i} {
+    @include breakpoint(large) {
+      height: $n+rem !important;
+      overflow-y: visible;
+    }
+  }
+}
+
+//$fractions: ("025", 0.25rem), ("05", 0.5rem), ("075", 0.75rem);
+//
+//@each $fraction in $fractions {
+//  .pb#{nth($fraction,1)} {
+//    padding-bottom: nth($fraction,2);
+//  }
+//  .pt#{nth($fraction,1)} {
+//    padding-top: nth($fraction,2);
+//  } 
+//}
+//
+//$colors: ("yellow",$yellow),("blue",$blue),("black",$black),("white",$white);
+//
+//@each $color in $colors {
+//  .small-bg-#{nth($color,1)} {
+//    background-color: nth($color,2);
+//    background-image: none;
+//  }
+//  .small-color-#{nth($color,1)} {
+//    color: nth($color,2);
+//  }
+//}
+//
+//@include breakpoint(medium) {
+//  @each $color in $colors {
+//    .medium-bg-#{nth($color,1)} {
+//      background-color: nth($color,2);
+//      background-image: none;
+//    }
+//    .medium-color-#{nth($color,1)} {
+//      color: nth($color,2);
+//    }
+//  }
+//}
+//@include breakpoint(large) {
+//  @each $color in $colors {
+//    .large-bg-#{nth($color,1)} {
+//      background-color: nth($color,2);
+//      background-image: none;
+//    }
+//    .large-color-#{nth($color,1)} {
+//      color: nth($color,2);
+//    }
+//  }
+//}
+
+.position-absolute {
+  position: absolute;
+}
+
+.position-relative {
+  position: absolute;
+}
+
+.top-25-percent {
+  top: 25%
+}
+
+.top-50-percent {
+  top: 50%
+}
+
+.height100 {
+  height: 100%;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+
+.full {
+  padding: 0 !important;
+}
+
+.clickable {
+  cursor: pointer;
+}

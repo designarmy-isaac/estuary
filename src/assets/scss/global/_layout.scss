@@ -1,0 +1,118 @@
+//html {
+//  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1a2f42+66,e1c6b3+67 */
+//  background: #1a2f42; /* Old browsers */
+//  background: -moz-linear-gradient(top, #1a2f42 66%, #e1c6b3 67%); /* FF3.6-15 */
+//  background: -webkit-linear-gradient(top, #1a2f42 66%,#e1c6b3 67%); /* Chrome10-25,Safari5.1-6 */
+//  background: linear-gradient(to bottom, #1a2f42 66%,#e1c6b3 67%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+//  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a2f42', endColorstr='#e1c6b3',GradientType=0 ); /* IE6-9 */
+//}
+
+html,
+body {
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.body {
+  height: 100%;
+  width: 100%;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+/*==============================
+  ============================== Section 1
+  ============================*/
+
+#section-1 {
+  height: 100%;
+  padding-top: .5rem;
+  background-image: url(../img/estuary-background-crab_cake-1920px.jpg);
+  background-position: bottom;
+  background-size: cover;
+  padding-bottom: 20rem;
+}
+
+/*==============================
+  ============================== Logo
+  ============================*/
+
+.logo-container {
+  height: 100%;
+  padding: $global-padding;
+}
+
+.logo {
+  height: auto;
+  width: 75%;
+  margin-left: 1rem;
+}
+
+/*==============================
+  ============================== Social Links
+  ============================*/
+
+.social-links {
+  padding-top: 1.25rem;
+}
+
+.social-link {
+  display: block;
+  float: right;
+  width: 100%;
+  height: 36px;
+  padding: 0 6px 5px 5px;
+  margin: 0;
+  line-height: 0;
+  opacity: 1;
+  transition: .3s;
+  &:hover {
+    opacity: .85;
+  }
+  img {
+    float: right;
+  }
+}
+
+/*==============================
+  ============================== Section 2
+  ============================*/
+
+#section-2 {
+  background-image: url(../img/estuary-background-crab_cake-gradient-1920px.jpg);
+  background-position: top;
+  background-size: cover;
+}
+
+/*==============================
+  ============================== Footer
+  ============================*/
+
+footer {
+  padding-top: 5rem;
+  p {
+    color: $gold;
+    font-size: 80%;
+    text-transform: uppercase;
+    &.small {
+      font-size: 65%;
+      line-height: 1.4;
+      margin-bottom: .75rem;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
