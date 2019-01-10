@@ -76,13 +76,17 @@ $medium-gray: #cacaca;
 $dark-gray: #242a2f;
 $black: #19252f;
 $white: #ffffff;
-$gold: #A27B63;
+$light-copper:#A27B63;
+$dark-copper: #8E644A;
+$light-pink:#FADDCB;
+$dark-pink: #E3C7B4;
+$navy-blue: #1D2E42;
 $foundation-palette: (
-  primary: $gold,
-  secondary: $medium-gray,
-  success: $medium-gray,
-  warning: $gold,
-  alert: $gold,
+  primary: $light-copper,
+  secondary: $light-pink,
+  success: $navy-blue,
+  warning: $dark-copper,
+  alert: $dark-copper,
 );
 $body-background: $white;
 $body-font-color: $black;
@@ -90,7 +94,7 @@ $body-font-family: 'FFMarkWebProBook', 'Avenir Next', Avenir, Helvetica, Arial, 
 $accent-font-family: 'FFMarkWebProBook', 'Avenir Next', Avenir, Helvetica, Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
-$global-padding: 1rem;
+$global-padding: 2rem;
 $global-position: 1rem;
 $global-weight-normal: normal;
 $global-weight-bold: bold;
@@ -189,7 +193,7 @@ $code-background: $light-gray;
 $code-border: 1px solid $medium-gray;
 $code-padding: rem-calc(2 5 1);
 $anchor-color: inherit;
-$anchor-color-hover: $gold;
+$anchor-color-hover: $dark-copper;
 //$anchor-color-hover: scale-color($anchor-color, $lightness: +14%);
 $anchor-text-decoration: underline;
 $anchor-text-decoration-hover: underline;
@@ -883,8 +887,8 @@ $xy-grid: true;
 $grid-container: $global-width;
 $grid-columns: 12;
 $grid-margin-gutters: (
-  small: 20px,
-  medium: 30px
+  small: 36px,
+  medium: 48px
 );
 $grid-padding-gutters: $grid-margin-gutters;
 $grid-container-padding: 0;

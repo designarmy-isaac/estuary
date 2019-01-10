@@ -1,16 +1,5 @@
-//html {
-//  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1a2f42+66,e1c6b3+67 */
-//  background: #1a2f42; /* Old browsers */
-//  background: -moz-linear-gradient(top, #1a2f42 66%, #e1c6b3 67%); /* FF3.6-15 */
-//  background: -webkit-linear-gradient(top, #1a2f42 66%,#e1c6b3 67%); /* Chrome10-25,Safari5.1-6 */
-//  background: linear-gradient(to bottom, #1a2f42 66%,#e1c6b3 67%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-//  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a2f42', endColorstr='#e1c6b3',GradientType=0 ); /* IE6-9 */
-//}
-
-html,
 body {
-  min-height: 100%;
-  min-width: 100%;
+  background-color: $light-pink;
 }
 
 .body {
@@ -38,11 +27,15 @@ h6, .h6 {
 
 #section-1 {
   height: 100%;
-  padding-top: .5rem;
+  padding-top: 1rem;
   background-image: url(../img/estuary-background-crab_cake-1920px.jpg);
   background-position: bottom;
   background-size: cover;
-  padding-bottom: 20rem;
+  padding-bottom: 50%;
+  @include breakpoint(medium) {
+    padding-bottom: 50%;
+    padding-bottom: 70vh;
+  }
 }
 
 /*==============================
@@ -51,29 +44,28 @@ h6, .h6 {
 
 .logo-container {
   height: 100%;
-  padding: $global-padding;
+  position: absolute;
+  padding-bottom: 2.5rem;
 }
 
-.logo {
+.logo-small {
   height: auto;
   width: 75%;
-  margin-left: 1rem;
+}
+
+.logo-medium {
+  height: 100%;
 }
 
 /*==============================
   ============================== Social Links
   ============================*/
 
-.social-links {
-  padding-top: 1.25rem;
-}
-
 .social-link {
   display: block;
   float: right;
   width: 100%;
   height: 36px;
-  padding: 0 6px 5px 5px;
   margin: 0;
   line-height: 0;
   opacity: 1;
@@ -97,22 +89,189 @@ h6, .h6 {
 }
 
 /*==============================
+  ============================== Email Submit
+  ============================*/
+
+[contenteditable="true"]:focus {
+  outline: none;
+  outline-color: transparent;
+  outline-style: none;
+}
+
+.custom-form {
+  border: 1px solid $black;
+  margin-top: 2rem 0 0;
+  max-width: 20rem;
+  padding: 0;
+  position: relative;
+//  overflow: hidden;
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="date"],
+  input[type="number"],
+  input[type="search"],
+  input[type="url"],
+  input[type="tel"],
+  input[type="month"],
+  select {
+    color: $black;
+    font-family: $body-font-family;
+    text-transform: none;
+    outline: none;
+    border: none;
+    padding: .75rem .5rem .25rem;
+    margin: 0;
+    font-size: 1rem;
+    z-index: 500;
+    width: 88%;
+  }
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus,
+  input[type="date"]:focus,
+  input[type="number"]:focus,
+  input[type="search"]:focus,
+  input[type="url"]:focus,
+  input[type="tel"]:focus,
+  input[type="month"]:focus,
+  select:focus,
+  input[type="text"]:hover,
+  input[type="email"]:hover,
+  input[type="password"]:hover,
+  input[type="date"]:hover,
+  input[type="number"]:hover,
+  input[type="search"]:hover,
+  input[type="url"]:hover,
+  input[type="tel"]:hover,
+  input[type="month"]:hover,
+  select:hover
+  {
+    outline: none;
+  }
+
+  label {
+    color: inherit;
+    font-size: .7rem;
+    font-weight: normal;
+    position: absolute;
+    text-transform: uppercase;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    top: 0;
+    margin-left: 1rem;
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+  }
+
+  input.input-full ~ label,
+  select ~ label {
+    margin-left: .5rem;
+    opacity: 1;
+  }
+
+  /* focused state */
+  input:focus ~ label,
+  select:focus ~ label {
+    margin-left: .5rem;
+    opacity: 1;
+  }
+}
+
+#reveal-button {
+  padding: .7rem;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+#mc-embedded-subscribe {
+  position: absolute;
+  right: -1rem;
+  top: 0;
+  padding: .6rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .2s linear;
+  
+  &.show {
+    visibility: visible;
+    opacity: 1;
+    right: 0rem;
+  }
+}
+
+.form-error {
+  font-weight: normal;
+  position: absolute;
+  bottom: -2.25rem;
+  left: .5rem;
+  text-transform: uppercase;
+}
+
+/*==============================
   ============================== Footer
   ============================*/
 
 footer {
   padding-top: 5rem;
   p {
-    color: $gold;
+    color: $light-copper;
     font-size: 80%;
     text-transform: uppercase;
-    &.small {
-      font-size: 65%;
-      line-height: 1.4;
-      margin-bottom: .75rem;
-      a {
-        text-decoration: none;
-      }
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+.footer-info {
+  @include breakpoint(large) {
+    display: inline-block;
+    margin-right: 1.5rem;
+  }
+}
+
+.footer-logo {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  @include breakpoint(large) {
+    margin-top: 0;
+    margin-bottom: 0;
+    float: right;
+  }
+}
+
+.footer-link,
+.footer-copyright {
+  font-size: 65%;
+  line-height: 1.4;
+  margin-bottom: .75rem;
+  @include breakpoint(large) {
+    display: inline-block;
+  }
+}
+
+.footer-link {
+  @include breakpoint(large) {
+    &:after {
+      content: " | ";
+      margin: 0 .5rem;
     }
+  }
+  
+}
+
+.footer-copyright {
+  margin-top: 6rem;
+  @include breakpoint(large) {
+    margin-top: 0;
   }
 }
