@@ -2,7 +2,7 @@
 
 /**
  * @license
- * MyFonts Webfont Build ID 3679485, 2018-11-27T10:27:49-0500
+ * MyFonts Webfont Build ID 3697222, 2019-01-11T11:53:27-0500
  * 
  * The fonts listed in this notice are subject to the End User License
  * Agreement(s) entered into by the website owner. All other parties are 
@@ -10,24 +10,23 @@
  * 
  * You may obtain a valid license at the URLs below.
  * 
- * Webfont: RFRufo-Semibold by Russian Fonts
- * URL: https://www.myfonts.com/fonts/russian-fonts/rf-rufo/semibold/
- * Copyright: Copyright &#x00A9; 2017 by Russian Fonts. All rights reserved.
- * Licensed pageviews: 220,000
- * 
- * Webfont: FF Mark Web Pro Book by FontFont
- * URL: https://www.myfonts.com/fonts/fontfont/mark/pro-book/
- * Copyright: 2013 published by FontShop International GmbH
+ * Webfont: FF Mark Web Pro Regular by FontFont
+ * URL: https://www.myfonts.com/fonts/fontfont/mark/pro-regular/
+ * Copyright: 2016 published by Monotype GmbH
  * Licensed pageviews: 50,000
  * 
  * 
- * License: https://www.myfonts.com/viewlicense?type=web&buildid=3679485
+ * License: https://www.myfonts.com/viewlicense?type=web&buildid=3697222
  * 
- * © 2018 MyFonts Inc
+ * © 2019 MyFonts Inc
 */
-@import url("//hello.myfonts.net/count/3824fd");
 
-@font-face {font-family: 'FFMarkWebProBook';src: url('/assets/webfonts/3824FD_1_0.eot');src: url('/assets/webfonts/3824FD_1_0.eot?#iefix') format('embedded-opentype'),url('/assets/webfonts/3824FD_1_0.woff2') format('woff2'),url('/assets/webfonts/3824FD_1_0.woff') format('woff'),url('/assets/webfonts/3824FD_1_0.ttf') format('truetype');}
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/386a46");
+  
+@font-face {font-family: 'FFMarkWebProRegular';src: url('webfonts/386A46_0_0.eot');src: url('webfonts/386A46_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/386A46_0_0.woff2') format('woff2'),url('webfonts/386A46_0_0.woff') format('woff'),url('webfonts/386A46_0_0.ttf') format('truetype');}
+ 
  /*END WEBFONTS*/
 
 @import 'settings';
