@@ -3,6 +3,7 @@ body {
 }
 
 .body {
+  background-color: $light-pink;
   height: 100%;
   width: 100%;
 }
@@ -28,6 +29,7 @@ h6, .h6 {
 #section-1 {
   height: 100%;
   padding-top: 1rem;
+  background-color: $light-pink;
   background-image: url(../img/estuary-background-crab_cake-1920px.jpg);
   background-position: bottom;
   background-size: cover;
@@ -83,6 +85,7 @@ h6, .h6 {
   ============================*/
 
 #section-2 {
+  background-color: $light-pink;
   background-image: url(../img/estuary-background-crab_cake-gradient-1920px.jpg);
   background-position: top;
   background-size: cover;
@@ -145,7 +148,17 @@ h6, .h6 {
   input[type="url"]:hover,
   input[type="tel"]:hover,
   input[type="month"]:hover,
-  select:hover
+  select:hover,
+  input[type="text"]:active,
+  input[type="email"]:active,
+  input[type="password"]:active,
+  input[type="date"]:active,
+  input[type="number"]:active,
+  input[type="search"]:active,
+  input[type="url"]:active,
+  input[type="tel"]:active,
+  input[type="month"]:active,
+  select:active
   {
     outline: none;
   }
@@ -185,6 +198,7 @@ h6, .h6 {
 }
 
 #reveal-button {
+  color: $black;
   padding: .7rem;
   position: absolute;
   text-align: center;
