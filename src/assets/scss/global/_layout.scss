@@ -199,13 +199,20 @@ h6, .h6 {
   }
 }
 
-#reveal-button {
+#reveal-button,
+.form-thankyou {
   color: $black;
-  padding: .7rem;
-  position: absolute;
   text-align: center;
   text-transform: uppercase;
   width: 100%;
+}
+.form-thankyou {
+  padding: .45rem .7rem;
+}
+
+#reveal-button {
+  padding: .7rem;
+  position: absolute;
 }
 
 #mc-embedded-subscribe {

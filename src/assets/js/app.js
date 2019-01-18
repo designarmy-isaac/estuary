@@ -60,6 +60,42 @@ document.addEventListener('focus', function(e) {
 //  }
 //},true);
   
+  $('#mc-embedded-subscribe-form').submit(function(e){
+    e.preventDefault();
+    submitSubscribeForm($('#mc-embedded-subscribe-form'), $('#form-result'));
+  });
+  
+  function submitSubscribeForm($form, $resultElement) {
+    $.ajax({
+      type: "GET",
+      url: $form.attr("action"),
+      data: $form.serialize(),
+      cache: false,
+      dataType: "jsonp",
+      jsonp: "c",
+      contentType: "application/json; charset=utf-8",
+      
+      error: function(error){},
+      
+      success: function(data){
+        if (data.result != "success") {
+          var message = data.msg || "Sorry. Unable to subscribe. Please try again later.";
+          if (data.msg && data.msg.indexOf("already subscribed") >= 0) {
+            message = "You're already subscribed.";
+          }
+          
+          $resultElement.html(message);
+        } else {
+          $resultElement.html("");
+          $('#mc_embed_signup_scroll').html('<div class="form-thankyou">THANK YOU</div>');
+        }
+      } 
+    });
+  }
+  
+  
+  
+  
 /*
 ==================================================
 ================================================== SVG Injector
