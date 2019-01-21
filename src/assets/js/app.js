@@ -91,45 +91,6 @@ document.addEventListener('focus', function(e) {
         }
       } 
     });
-  }
-  
-  
-  
-  
-/*
-==================================================
-================================================== SVG Injector
-==================================================
-*/ 
-  
-// SVG Injector
-// Elements to inject
-var mySVGsToInject = document.querySelectorAll('img.inject-me');
-
-// Options
-var injectorOptions = {
-  evalScripts: 'once',
-  pngFallback: 'assets/png'
-};
-
-var afterAllInjectionsFinishedCallback = function (totalSVGsInjected) {
-  // Callback after all SVGs are injected
-  console.log('We injected ' + totalSVGsInjected + ' SVG(s)!');
-};
-
-var perInjectionCallback = function (svg) {
-  // Callback after each SVG is injected
-  console.log('SVG injected: ' + svg);
-};
-
-// create injector configured by options
-var injector = new libs.svgInjector(injectorOptions);
-
-// Trigger the injection
-injector.inject(
-  mySVGsToInject,
-  afterAllInjectionsFinishedCallback,
-  perInjectionCallback
-);
+  };
   
 });

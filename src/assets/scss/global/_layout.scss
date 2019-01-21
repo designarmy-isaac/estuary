@@ -30,11 +30,12 @@ h6, .h6 {
   height: 100%;
   padding-top: 1rem;
   background-color: $light-pink;
-  background-image: url(../img/estuary-background-crab_cake-1920px.jpg);
+  background-image: url(../img/estuary-background-crab_cake-750px.jpg);
   background-position: bottom;
   background-size: cover;
-  padding-bottom: 50%;
+  padding-bottom: 80%;
   @include breakpoint(medium) {
+  background-image: url(../img/estuary-background-crab_cake-1920px.jpg);
     padding-bottom: 50%;
     padding-bottom: 70vh;
   }
@@ -67,7 +68,7 @@ h6, .h6 {
   display: block;
   float: right;
   width: 100%;
-  height: 36px;
+  height: 2.25rem;
   margin: 0;
   line-height: 0;
   opacity: 1;
@@ -77,6 +78,7 @@ h6, .h6 {
   }
   img {
     float: right;
+    width: 1.5rem;
   }
 }
 
@@ -184,6 +186,10 @@ h6, .h6 {
     -moz-transition: 0.2s ease all;
     -webkit-transition: 0.2s ease all;
   }
+  
+  .email {
+    background-color: transparent;
+  }
 
   input.input-full ~ label,
   select ~ label {
@@ -265,6 +271,8 @@ footer {
 .footer-logo {
   margin-top: 1rem;
   margin-bottom: 2rem;
+  height: 2rem;
+  width: auto;
   @include breakpoint(large) {
     margin-top: 0;
     margin-bottom: 0;
