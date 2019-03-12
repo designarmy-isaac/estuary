@@ -82,6 +82,31 @@ h6, .h6 {
   }
 }
 
+.make-a-reservation {
+  display: block;
+  color: $light-pink;
+  position: relative;
+  overflow: visible;
+  word-break: keep-all;
+  transform: rotate(0.25turn);
+  letter-spacing: 2px;
+  text-decoration: none;
+  float: right;
+  width: 1.5rem;
+  padding: .25rem;
+  &:hover {
+    color: $dark-pink;
+  }
+  @include breakpoint(medium) {
+    display: block;
+    text-align: right;
+    float: none;
+    transform: rotate(0);
+    width: 100%;
+    top: -.4rem;
+  }
+}
+
 /*==============================
   ============================== Section 2
   ============================*/
@@ -280,6 +305,8 @@ footer {
     margin-top: 0;
     margin-bottom: 0;
     float: right;
+    position: relative;
+    top: 2rem;
   }
 }
 
